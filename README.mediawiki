@@ -1,0 +1,43 @@
+A MediaWiki extension which extends the link syntax to allow custom attributes, such as rel="author".
+
+==Release ==
+[https://github.com/rotsee/LinkAttributes/tags 0.1]
+
+==Dependencies==
+MediaWiki 1.19
+
+==Installation==
+Upload to your extensions folder, and add the following settings to LocalSettings.php:
+require_once("$IP/extensions/LinkAttributes/LinkAttributes.php");
+
+==Usage==
+Extra attributes are added at the end of a link, separated with a pipe (|) or a broken pipe (¦), like this:
+
+[[User:James|my page|rel=author]]
+
+[http://twitter.com/leo_wallentin my Twitter account|rel=me]
+
+Allowed properties are: rel, rev, charset, type, hreflang and itemprop.
+
+In some places (such as inside templates with tables) the pipe can be hard to use, as it has special meanings to MediaWiki. Therefore a broken pipe (¦) will also work with this extension: [[Oranges|Oranges¦itemprop=fruit]].
+Note that the following will NOT work: [[User:James|rel=author]], as this extension has no way of knowing if rel=author is supposed to be an attribute or the actual text to be linked. The link would have to be written like this: [[User:James|James|rel=author]]. Also note that after installing this extension, pipes will not work in link texts.
+
+
+==Changelog==
+* 0.1
+** First version
+
+==Credits ==
+The extension was originally written for http://säsongsmat.nu.
+
+Leo Wallentin
+leo_wallentin (at) hotmail.com
+@leo_wallentin
+http://xn--ssongsmat-v2a.nu
+
+== License ==
+BSD 
+
+== Disclaimer ==
+The source code is provided as-is, without warranty and does not warrant or endorse and does not assume and will not have any liability or responsibility for any damage or loss.
+__NOTOC__
