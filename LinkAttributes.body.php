@@ -4,7 +4,7 @@ class LinkAttributes {
 
 	private function attributeIsAllowed ( $str ) {
 
-		if ( in_array( $str, array( 'rel', 'rev', 'charset ', 'type', 'hreflang', 'itemprop', 'media', 'title', 'accesskey' ) ) )
+		if ( in_array( $str, array( 'rel', 'rev', 'charset ', 'type', 'hreflang', 'itemprop', 'media', 'title', 'accesskey', 'target' ) ) )
 			return true;
 		else
 			return false;
