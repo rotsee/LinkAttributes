@@ -15,4 +15,6 @@ $messages = array();
 $messages['sv'] = array(
         'linkattr-desc' => 'Gör det möjligt att sätta vissa html-attribut på länkar.',
 );
-
+$messages['pt'] = array(
+        'linkattr-desc' => 'Permite adicionar ou remover atributios HTML em links.',
+);
