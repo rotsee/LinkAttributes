@@ -1,4 +1,4 @@
-A MediaWiki extension which extends the link syntax to allow custom attributes, such as rel="author".
+A MediaWiki extension ([http://www.mediawiki.org/wiki/Extension:LinkAttributes Extension:LinkAttributes]) which extends the link syntax to allow custom attributes, such as rel="author".
 
 ==Release ==
 [https://github.com/rotsee/LinkAttributes/tags 0.1]
