@@ -1,10 +1,7 @@
 A MediaWiki extension ([http://www.mediawiki.org/wiki/Extension:LinkAttributes Extension:LinkAttributes]) which extends the link syntax to allow custom attributes, such as rel="author".
 
-==Release ==
-[https://github.com/rotsee/LinkAttributes/tags 0.1]
-
-==Dependencies==
-MediaWiki 1.19
+;Release:  [https://github.com/rotsee/LinkAttributes/tags v0.2] beta
+;Dependencies: MediaWiki 1.19+
 
 ==Installation==
 Upload to your extensions folder, and add the following settings to LocalSettings.php:
@@ -24,8 +21,8 @@ Note that the following will NOT work: [[User:James|rel=author]], as this extens
 
 
 ==Changelog==
-* 0.1
-** First version
+: [https://github.com/rotsee/LinkAttributes/releases/tag/v0.2 v0.2]: Second version (last beta). fixed issues #1 ,#4, #5, #6 and #9.
+: [https://github.com/rotsee/LinkAttributes/releases/tag/v0.1 v0.1]: First version (beta).
 
 ==Credits ==
 The extension was originally written for http://säsongsmat.nu.
