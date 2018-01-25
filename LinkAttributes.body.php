@@ -23,14 +23,8 @@ class LinkAttributes {
 			$pair = explode( '=', $a );
 
 			/* Only go ahead if we have a aaa=bbb pattern, and aaa i an allowed attribute */
-			if ( isset( $pair[1] ) && in_array( $pair[0], self::attrsAllowed ) ) {
-
-				/* Add to existing attribute, or create a new */
-				if ( isset( $attribs[$pair[0]] ) ) {
-					$attribs[$pair[0]] = $attribs[$pair[0]] . ' ' . $pair[1];
-				} else {
-					$attribs[$pair[0]] = $pair[1];
-				}
+			if ( isset( $pair[1] ) && in_array( $pair[0], self::$attrsAllowed ) ) {
+				$attribs[$pair[0]] = (isset($attribs[$pair[0]])) ? $attribs[$pair[0]] . ' ' . $pair[1] : $attribs[$pair[0]];
 			}
 
 		}
