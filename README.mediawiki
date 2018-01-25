@@ -10,14 +10,14 @@ require_once("$IP/extensions/LinkAttributes/LinkAttributes.php");
 ==Usage==
 Extra attributes are added at the end of a link, separated with a pipe (|) or a broken pipe (¦), like this:
 
-[[User:James|my page|rel=author]]
+    [[User:James|my page|rel=author]]
 
-[http://twitter.com/leo_wallentin my Twitter account|rel=me]
+    [http://twitter.com/leo_wallentin my Twitter account|rel=me]
 
 Allowed properties are: rel, rev, charset, type, hreflang and itemprop.
 
-In some places (such as inside templates with tables) the pipe can be hard to use, as it has special meanings to MediaWiki. Therefore a broken pipe (¦) will also work with this extension: [[Oranges|Oranges¦itemprop=fruit]].
-Note that the following will NOT work: [[User:James|rel=author]], as this extension has no way of knowing if rel=author is supposed to be an attribute or the actual text to be linked. The link would have to be written like this: [[User:James|James|rel=author]]. Also note that after installing this extension, pipes will not work in link texts.
+In some places (such as inside templates with tables) the pipe can be hard to use, as it has special meanings to MediaWiki. Therefore a broken pipe (¦) will also work with this extension: <pre>[[Oranges|Oranges¦itemprop=fruit]]</pre>.
+Note that the following will NOT work: <pre>[[User:James|rel=author]]</pre>, as this extension has no way of knowing if rel=author is supposed to be an attribute or the actual text to be linked. The link would have to be written like this: <pre>[[User:James|James|rel=author]]</pre>. Also note that after installing this extension, pipes will not work in link texts.
 
 
 ==Changelog==
