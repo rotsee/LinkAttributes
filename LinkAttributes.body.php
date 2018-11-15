@@ -1,7 +1,7 @@
 <?php
 
 class LinkAttributes {
-	private static $attrsAllowed=array( 'rel', 'rev', 'charset ', 'type', 'hreflang', 'itemprop', 'media', 'title', 'accesskey', 'target' );
+	private static $attrsAllowed=array( 'class', 'property', 'rel', 'rev', 'charset ', 'type', 'hreflang', 'itemprop', 'media', 'title', 'accesskey', 'target' );
 
 	private function doExtractAttributes ( &$text, &$attribs ) {
 
