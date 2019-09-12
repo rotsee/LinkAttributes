@@ -3,7 +3,7 @@
 class LinkAttributes {
 	private static $attrsAllowed=array( 'rel', 'rev', 'charset ', 'type', 'hreflang', 'itemprop', 'media', 'title', 'accesskey', 'target' );
 
-	private function doExtractAttributes ( &$text, &$attribs ) {
+	private static function doExtractAttributes ( &$text, &$attribs ) {
 
 		global $wgRequest;
 		if ( $wgRequest->getText( 'action' ) == 'edit' ) {
@@ -23,7 +23,7 @@ class LinkAttributes {
 			$pair = explode( '=', $a );
 
 			/* Only go ahead if we have a aaa=bbb pattern, and aaa i an allowed attribute */
-			if ( isset( $pair[1] ) && in_array( $pair[0], self::attrsAllowed ) ) {
+			if ( isset( $pair[1] ) && in_array( $pair[0], self::$attrsAllowed ) ) {
 
 				/* Add to existing attribute, or create a new */
 				if ( isset( $attribs[$pair[0]] ) ) {
@@ -39,13 +39,13 @@ class LinkAttributes {
 
 	}
 
-	public function ExternalLink ( &$url, &$text, &$link, &$attribs ) {
+	public static function ExternalLink ( &$url, &$text, &$link, &$attribs ) {
 
 		self::doExtractAttributes ( $text, $attribs );
 		return true;
 	}
 
-	public function InternalLink ( $skin, $target, &$text, &$customAttribs, &$query, &$options, &$ret ) {
+	public static function InternalLink ( $skin, $target, &$text, &$customAttribs, &$query, &$options, &$ret ) {
 
 		self::doExtractAttributes ( $text, $customAttribs );
 		return true;
